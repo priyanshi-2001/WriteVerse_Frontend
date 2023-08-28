@@ -8,8 +8,8 @@ import InputLabel from '@mui/material/InputLabel';
 import Snackbar from '@mui/material/Snackbar';
 
 const SignUp = () => {
-  const baseUrl='http://localhost:8000';
-    //  const baseUrl="https://writeverse-blogs.onrender.com";
+  // const baseUrl='http://localhost:8000';
+     const baseUrl="https://writeverse-blogs.onrender.com";
 
 
 

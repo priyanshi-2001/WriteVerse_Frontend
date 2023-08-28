@@ -5,8 +5,8 @@ import moment from 'moment'
 import {Image, Video, Transformation,CloudinaryContext} from 'cloudinary-react';
 import Snackbar from '@mui/material/Snackbar';
 import CreateBlog from './CreateBlog';
-const url="http://localhost:8000/";
-// const url="https://writeverse-blogs.onrender.com/";
+// const url="http://localhost:8000/";
+const url="https://writeverse-blogs.onrender.com/";
 const Admin = () => {
 
   const [data,setData]=useState([]);
