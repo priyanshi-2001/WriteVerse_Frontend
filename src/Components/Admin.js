@@ -34,13 +34,19 @@ const Admin = () => {
   },[])
 
 
-  const editBlog=async()=>{
+  const editBlog=async(description,currentFiles)=>{
     try{
       var formData=new FormData();
       for (let i = 0 ; i < files.length ; i++) {
           formData.append("files", files[i]);
       }
+      if(body!==""){
       formData.append("description",body); 
+      }
+      else{
+        formData.append("description",description); 
+      }
+      formData.append("currentFiles",currentFiles)
       formData.append("blogId",blogId); 
       const resp=await fetch(url+'updateBlog',{
         headers:{
@@ -323,7 +329,7 @@ const conditionsPeview=async(base64Temp,file)=>{
         ):(
           <>
           <Button onClick={()=>{setblogId('');setBlobPdfUrl([]);setImagesBlobUrl([]);setVideoBlobUrl([]);setBody('')}}> Cancel</Button>
-          <Button onClick={()=>{editBlog()}}>Save Changes</Button>
+          <Button onClick={()=>{editBlog(o.body,o.files)}}>Save Changes</Button>
           </>
         )}
         
