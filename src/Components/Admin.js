@@ -226,7 +226,7 @@ const conditionsPeview=async(base64Temp,file)=>{
           
           </Modal>
       <Button onClick={()=>{window.location.href='/createBlog'}}>Create Post</Button>
-      <Button onClick={()=>{window.localStorage.removeItem("token");window.localStorage.removeItem("userId");window.location='/login'}}>Logout</Button>
+      <Button onClick={()=>{window.localStorage.removeItem("token");window.localStorage.removeItem("userId");localStorage.removeItem("isIsAdmin");window.location='/login'}}>Logout</Button>
 
 {
   data &&
